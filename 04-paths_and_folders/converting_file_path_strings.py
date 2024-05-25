@@ -6,4 +6,4 @@ p = input('Please enter the target folder: ')
 path = Path(p).expanduser()
 
 if path.exists():
-    print(path)
+    print(path.home())
