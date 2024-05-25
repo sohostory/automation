@@ -1,11 +1,14 @@
 import shutil
 from pathlib import Path
 
-directory = input("Please enter the path to directory: ")
-path = Path(directory).expanduser()
+while True:
+    directory = input("Please enter the path to directory: ")
+    path = Path(directory).expanduser()
 
-if not path.exists():
-    raise Exception("The directory does not exist!")
+    if path.exists():
+        break
+
+    print('Invalid path. Please enter the valid path.')
 
 closet = path / 'closet'
 closet.mkdir(exist_ok=True)
